@@ -12,7 +12,7 @@ console.log("Server started.");
 
 var io = require('socket.io')(serv, {});
 io.sockets.on('connection', function (socket) { 
-	console.log('socket connection');
+	console.log('socket connection. id: ' + socket.id);
 
 	socket.on('happy', function (data) { 
 		console.log('happy because ' + data.reason);
